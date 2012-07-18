@@ -1,0 +1,149 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>InsureMYRide - Bike Insurance Quote - HTML Prototype v1</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body id="price-page">
+
+  <header>
+    <div class="top ">
+      <button onclick="location.href='IMR_quote.html'"><small>&#9664;</small> Back</button>
+      <img class="logo" src="http://www.insuremyride.com.au/imr/sites/all/themes/imr/images/insure-my-ride.gif" />
+    </div>
+    <div class="bar">
+      <div class="bar-inner clearfix">
+        <h1>Bike insurance quote</h1>
+        <div class="progress">Step 2 of 3</div>
+      </div>
+    </div>
+  </header>
+
+  <div id="content" role="main">
+
+      <form class="form-price" action="IMR_purchase.html">
+
+        <table class="summary" id="price-table">
+          <tr>
+            <th>Your quote number:</td>
+            <td id="quotenum">QTE8802233</td>
+          </tr>
+          <tr>
+            <th>Your yearly <a href="#?q=1">premium</a>:</td>
+            <td id="premium">$853.53</td>
+          </tr>
+          <tr>
+            <th>Based on an <a href="#?q=2">excess</a> of:</td>
+            <td id="excess">$400</td>
+          </tr>
+        </table>
+
+
+        <h2>Options</h2>
+        <fieldset>
+          <div class="question horiz">
+            <div class="horiz-left"><label for="option-excess">Flexible exess</label></div>
+            <div class="horiz-right">
+              <select id="option-excess" class="med">
+                <option value="400">$400</option>
+                <option value="500">$500</option>
+                <option value="750">$750</option>
+                <option value="1000">$1000</option>
+                <option value="1250">$1250</option>
+              </select>
+            </div>
+          </div>
+          <div class="question horiz">
+            <div class="horiz-left"><label for="option-valuables">Personal valuables cover</label></div>
+            <div class="horiz-right">
+              <select id="option-valuables" class="med">
+                <option>None</option>
+                <option>$1000</option>
+                <option>$2000</option>
+              </select>
+            </div>
+          </div>
+          <div class="question horiz">
+            <div class="horiz-left"><label for="option-gear">Riding gear cover</label></div>
+            <div class="horiz-right">
+              <select id="option-gear" class="med">
+                <option>None</option>
+                <option>$500</option>
+                <option>$1000</option>
+                <option>$3000</option>
+                <option>$5000</option>
+              </select>
+            </div>
+          </div>
+          <div class="question horiz">
+            <div class="horiz-left"><label for="option-mods"><a href="#?q=3">Bike modifications</a> cover</label></div>
+            <div class="horiz-right">
+              <select id="option-mods" class="med">
+                <option>None</option>
+                <option>$500</option>
+                <option>$1000</option>
+                <option>$3000</option>
+                <option>$5000</option>
+              </select>
+            </div>
+          </div>
+          <div class="question horiz">
+            <div class="horiz-left"><label for="option-payment">Payment frequency <small id="frequency-discount" class="important">(5% Discount)</small></label></div>
+            <div class="horiz-right">
+              <select id="option-payment" class="med">
+                <option value="y">Yearly</option>
+                <option value="q">Quarterly</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+
+        <button class="submit">Buy online now</button><br/>
+        <button class="save">Save and email</button>
+
+
+        <table class="summary">
+          <tr><th>Quote Date:</th><td><strong>5 Jul 2012</strong></td></tr>
+          <tr><th>Quote Valid to:</th><td><strong>5 Aug 2012</strong></td></tr>
+        </table>
+
+        <table class="summary">
+          <caption>Cover breakdown</caption>
+          <tr><th>Basic Premium:</th><td>$705.40</td></tr>
+          <tr><th>Premium GST:</th><td>$70.54</td></tr>
+          <tr><th>Premium stamp Duty:</th><td>$77.59</td></tr>
+          <tr><th>Sum Insured:</th><td>$20,990</td></tr>
+          <tr><th>Legal Liability:</th><td>$20,000,000</td></tr>
+        </table>
+
+        <table class="summary">
+          <caption>The following additional excesses may apply</caption>
+          <tr><th>Named under 25 year old riders:</th><td>$400</td></tr>
+          <tr><th>Unnamed under 25 year old riders:</th><td>$800</td></tr>
+          <tr><th>Inexperienced rider excess:</th><td>$800</td></tr>
+        </table>
+
+        <small>Full details can be found in InsureMyRide’s<br/> <a href="#?q=1">Product Disclosure Statement.</a></small>
+
+
+      </form>
+
+  </div>
+
+  <script src="js/libs/jquery-1.7.1.min.js"></script>
+  <script src="js/libs/jquery.autotab-1.1b.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

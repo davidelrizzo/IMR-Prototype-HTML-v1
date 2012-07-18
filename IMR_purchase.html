@@ -1,0 +1,223 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>InsureMYRide - Bike Insurance Quote - HTML Prototype v1</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body id="price-page">
+
+  <header>
+    <div class="top ">
+      <button onclick="location.href='IMR_price.html'"><small>&#9664;</small> Back</button>
+      <img class="logo" src="http://www.insuremyride.com.au/imr/sites/all/themes/imr/images/insure-my-ride.gif" />
+    </div>
+    <div class="bar">
+      <div class="bar-inner clearfix">
+        <h1>Bike insurance quote</h1>
+        <div class="progress">Step 3 of 3</div>
+      </div>
+    </div>
+  </header>
+
+  <div id="content" role="main">
+
+      <form class="form-purchase" action="IMR_summary.html">
+
+        <h2>Personal details</h2>
+        <fieldset>
+          <div class="question">
+            <label for="firstname">First name:</label>
+            <input id="firstname" type="text" class="hge" />
+          </div>
+          <div class="question">
+            <label for="lastname">Last name:</label>
+            <input id="lastname" type="text" class="hge" />
+          </div>
+          <div class="question">
+            <label for="dob_d">Date of birth:</label>
+            <div class="datefield">
+              <input name="mainrider-dob" id="dob_d" class="day" type="tel" maxlength="2" placeholder="DD" /> /              
+              <input name="mainrider-dob" id="dob_m" class="month" type="tel" maxlength="2" placeholder="MM" />/
+              <input name="mainrider-dob" id="dob_y" class="year" type="tel" maxlength="4" placeholder="YYYY" />
+            </div>
+          </div>
+          <div class="question">
+            <label for="phone">Phone number:</label>
+            <input id="phone" type="tel" class="lge" />
+          </div>
+          <div class="question">
+            <label for="email">Email address:</label>
+            <input id="email" type="email" class="full" />
+            <small class="block"><label><input type="checkbox"/> Keep me in the know with promotions and competitions</label></small>
+          </div>
+        </fieldset>
+
+
+        <h2>Address details</h2>
+        <fieldset>
+          <div class="question">
+            <label for="propertyname">Property name:</label><small class="optional">(Optional)</small>
+            <input id="propertyname" type="text" class="full" placeholder="eg. Suncorp Building" />
+          </div>
+          <div class="question">
+            <label for="buildingtype">Building type and Number:</label><small class="optional">(Optional)</small>
+            <input id="buildingtype" type="text" placeholder="eg. Level" class="half" />
+            <input id="buildingnum" type="text" placeholder="eg. 15" class="half" />
+          </div>
+          <div class="question">
+            <label for="buildingtype">Street number and Name:</label>
+            <input id="buildingtype" type="text" placeholder="eg. 447" class="quarter" />
+            <input id="buildingnum" type="text" placeholder="eg. Collins St." class="threequarter" />
+          </div>
+          <div class="question">
+            <label for="suburbpc">Suburb and Postcode</label>
+            <input id="suburbpc" type="text" class="full" placeholder="eg. Melbourne 3000" />
+          </div>
+          <div class="question">
+            <label for="state">State</label>
+            <select id="state">
+              <option>Please select...</option>
+              <option>ACT</option>
+              <option>NSW</option>
+              <option>VIC</option>
+              <option>QLD</option>
+              <option>SA</option>
+              <option>WA</option>
+              <option>TAS</option>
+              <option>NT</option>
+            </select>
+          </div>
+        </fieldset>
+
+
+        <h2>Payment details</h2>
+        <fieldset>
+          <div class="question">
+            <small class="cctype">
+                <img src="http://www.norcalcleansober.com/Pics/visa_mastercard_logo.gif"/>
+                Visa &amp; MasterCard accepted
+            </small>
+            <label for="cc">Credit card number:</label>
+            <input id="cc" type="tel" class="lge"/>
+          </div>
+          <div class="question">
+            <label for="ccname">Name on card:</label>
+            <input id="ccname" type="tel" class="hge"/>
+          </div>
+          <div class="question">
+            <label for="ccmonth">Card expiry date:</label>
+            <select id="ccmonth">
+              <option></option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+            <select id="ccyear">
+              <option></option>
+              <option>2012</option>
+              <option>2013</option>
+              <option>2014</option>
+              <option>2015</option>
+              <option>2016</option>
+              <option>2017</option>
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2022</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <h2>Final bike details</h2>
+        <fieldset>
+          <div class="question horiz">
+            <div class="horiz-left"><label for="rego">Bike registration number:</label></div>
+            <div class="horiz-right"><input id="rego" class="med" type="tel" maxlength="7"/></div>
+          </div>
+          <div class="question horiz">
+            <div class="horiz-left"><label for="vin">Vin number:</label></div>
+            <div class="horiz-right"><input id="vin" class="lge" type="tel" maxlength="16"/></div>
+          </div>
+          <div class="question" id="other-riders">
+            <label>
+              Add up to 3 other <a href="#?q=5">regular</a> riders of you bike who you would like to cover.
+              <small>(Optional)</small>
+            </label>
+
+            <div class="sub-question horiz">
+              <div class="horiz-left">
+                  <label for="name1">Name:</label>
+                  <input id="name1" type="text" class="full" placeholder="Additional rider 1"/>
+              </div>
+              <div class="horiz-right">
+                  <label for="rider1-d">Date of birth:</label>
+                  <div class="datefield" >
+                    <input name="rider1-dob" class="day" id="rider1-d" type="tel" maxlength="2" placeholder="DD" />/              
+                    <input name="rider1-dob" class="month" id="rider1-m" type="tel" maxlength="2" placeholder="MM" />/
+                    <input name="rider1-dob" class="year" id="rider1-y" type="tel" maxlength="4" placeholder="YYYY" />
+                  </div>
+              </div>
+            </div>
+
+            <div class="sub-question horiz">
+              <div class="horiz-left">
+                  <input id="name1" type="text" class="full" placeholder="Additional rider 2"/>
+              </div>
+              <div class="horiz-right">
+                  <div class="datefield" >
+                    <input name="rider2-dob" class="day" id="rider1-d" type="tel" maxlength="2" placeholder="DD" /> /              
+                    <input name="rider2-dob" class="month" id="rider1-m" type="tel" maxlength="2" placeholder="MM" />/
+                    <input name="rider3-dob" class="year" id="rider1-y" type="tel" maxlength="4" placeholder="YYYY" />
+                  </div>
+              </div>
+            </div>
+
+            <div class="sub-question horiz">
+              <div class="horiz-left">
+                  <input id="name1" type="text" class="full" placeholder="Additional rider 3"/>
+              </div>
+              <div class="horiz-right">
+                  <div class="datefield" >
+                    <input name="rider3-dob" class="day" id="rider1-d" type="tel" maxlength="2" placeholder="DD" /> /              
+                    <input name="rider3-dob" class="month" id="rider1-m" type="tel" maxlength="2" placeholder="MM" />/
+                    <input name="rider3-dob" class="year" id="rider1-y" type="tel" maxlength="4" placeholder="YYYY" />
+                  </div>
+              </div>
+            </div>
+
+
+          </div>
+        </fieldset>
+
+
+        <button class="submit">Confirm &amp; Purchase</button>
+
+      </form>
+
+  </div>
+
+  <script src="js/libs/jquery-1.7.1.min.js"></script>
+  <script src="js/libs/jquery.autotab-1.1b.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
